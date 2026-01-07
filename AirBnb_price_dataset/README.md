@@ -71,7 +71,7 @@ The analysis supports **pricing strategy insights** and market understanding.
 ## How to Run
 
 ```bash
-jupyter notebook
+jupyter notebook airbnb-analysis.ipynb
 ```
 
 ## Business Value
