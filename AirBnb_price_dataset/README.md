@@ -55,7 +55,7 @@ The goal is to turn raw Airbnb data into a business-style dashboard that support
 
 ## Project Structure
 
-````text
+```text
 AirBnb_price_dataset/
 │
 ├── data/
@@ -67,8 +67,10 @@ AirBnb_price_dataset/
 │
 ├── README.md
 └── requirements.txt
-´´´
+```
+
 ---
+
 ##  Data Description
 
 ### 1. Airbnb_Data.csv
@@ -114,19 +116,19 @@ The dashboard performs:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/airbnb-pricing-dashboard.git
+git clone https://github.com/MM-Robin/airbnb-pricing-dashboard.git
 cd airbnb-pricing-dashboard
-´´´
+```
 
 ### 2. Install dependencies
-´´´bash
+```bash
 pip install -r requirements.txt
-´´´
+```
 
 ### 3. Run the dashboard
-´´´bash
+```bash
 streamlit run dashboard/app.py
-´´´
+```
 
 ##  Example Insights
 
@@ -174,5 +176,5 @@ This dashboard demonstrates how data can be used to:
 ##  Author
 
 **Mainuddin Monsur Robin**
-Aspiring Data Analyst / Data Engineer
+
 Hamburg, Germany
