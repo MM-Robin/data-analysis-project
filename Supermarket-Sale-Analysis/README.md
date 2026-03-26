@@ -1,89 +1,150 @@
-# Supermarket Sales Analysis
+# 🛒 Supermarket Sales Analysis & Prediction
 
-## Project Overview
-
-This project analyzes supermarket sales data to uncover **sales trends**, **customer behavior**, and **product performance**.  
-The goal is to generate **actionable business insights** that can support **sales, marketing, and operational decisions**.
+An end-to-end data analysis and machine learning project to explore sales patterns and predict transaction-level revenue.
 
 ---
 
-## Business Objectives
+## 🚀 Project Overview
 
-- Identify **high-performing product lines**
-- Understand **customer purchasing behavior**
-- Analyze sales differences by **gender and customer type**
-- Evaluate **payment method preferences**
+This project analyzes supermarket sales data to uncover business insights and build a predictive model for estimating sales.
 
----
+It combines:
 
-## Dataset
-
-- **File:** `supermarket_sales.csv`
-- **Type:** Retail sales transactional data
+- Exploratory Data Analysis (EDA)
+- Interactive Dashboard (Streamlit)
+- Machine Learning (Regression Model)
 
 ---
 
-## Key Business Questions
+## 📊 Dashboard Features
 
-- Which product lines generate the most revenue?
-- Do member customers spend more than normal customers?
-- Are there purchasing differences by gender?
-- Which payment method is most frequently used?
-
----
-
-## Analysis Performed
-
-- Data cleaning and preprocessing
-- Descriptive statistical analysis
-- Grouped aggregations using Pandas
-- Comparative sales analysis
-- Business-focused visualizations
+- Interactive filters (Branch, Product Line)
+- KPI cards:
+  - Total Revenue
+  - Average Sales
+  - Total Transactions
+  - Average Rating
+- Visualizations:
+  - Sales by Product Line
+  - Payment Method Distribution
+  - Monthly Sales Trend
+  - Sales by Gender
+  - Sales by Customer Type
 
 ---
 
-## Visualizations
+## 🔮 Machine Learning Model
 
-- Sales by product line (bar chart)
-- Sales comparison by gender
-- Sales by customer type
-- Payment method distribution
+A regression model is built to estimate **total sales per transaction**.
 
-(All plots are available in the `visuals/` folder)
+### 📌 Input Features:
+
+- Unit Price
+- Quantity
+- Customer Rating
+
+### 🎯 Target:
+
+- Sales (Revenue)
 
 ---
 
-## Tools & Technologies
+## 📈 Model Performance
+
+| Metric   | Value |
+| -------- | ----- |
+| MAE      | 58.41 |
+| RMSE     | 78.73 |
+| R² Score | 0.90  |
+
+👉 The model explains approximately **90% of the variation in sales**, indicating strong predictive performance.
+
+---
+
+## 📉 Model Evaluation Visualizations
+
+### 🔹 Actual vs Predicted Sales
+
+![Actual vs Predicted](visuals/actual_vs_predicted.png)
+
+👉 Points close to the red line indicate accurate predictions.
+
+---
+
+### 🔹 Error Distribution
+
+![Error Distribution](visuals/error_distribution.png)
+
+👉 Errors are centered around zero, showing good model accuracy.
+
+---
+
+## 💡 Key Insights
+
+- Sales are strongly influenced by **price and quantity**
+- Certain product categories generate higher revenue
+- Customer type and gender show different purchasing patterns
+- Payment methods are evenly distributed
+- Monthly trends show variation in sales performance
+
+---
+
+## 💼 Business Value
+
+This project demonstrates how data can be used to:
+
+- Analyze retail performance
+- Understand customer behavior
+- Support pricing and sales strategies
+- Build interactive dashboards
+- Apply machine learning for prediction
+
+---
+
+## 🛠️ Tech Stack
 
 - Python
 - Pandas
 - NumPy
 - Matplotlib
 - Seaborn
-- Jupyter Notebook
+- Scikit-learn
+- Streamlit
 
 ---
 
-## Key Insights
+## 📂 Project Structure
 
-- Certain product lines consistently outperform others
-- Member customers show higher average spending
-- Digital payment methods dominate transactions
-- Clear customer segmentation patterns exist
+´´´text
+Supermarket-Sale-Analysis/
+│
+├── data/
+├── dashboard/
+│ └── app.py
+├── visuals/
+│ ├── actual_vs_predicted.png
+│ └── error_distribution.png
+├── supermarket_sales_analysis.ipynb
+├── README.md
+´´´
 
----
+## ▶️ How to Run
 
-## How to Run
+### 1. Clone the repository
 
+````bash
+git clone https://github.com/your-username/supermarket-sales-analysis-dashboard.git
+cd Supermarket-Sale-Analysis´´´
+
+2. Install dependencies
 ```bash
-jupyter notebook supermarket_sales_analysis.ipynb
-```
+pip install -r requirements.txt´´´
 
-# Business Value
+3. Run dashboard
+```bash
+streamlit run dashboard/app.py´´´
 
-This analysis helps businesses:
+## Author
 
-- Improve product placement
-- Optimize marketing strategies
-- Enhance customer segmentation
-- Support data-driven retail decisions
+**Mainuddin Monsur Robin**
+````
