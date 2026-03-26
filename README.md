@@ -31,21 +31,41 @@ data-analysis-project-main/
 ├── Supermarket-Sale-Analysis/
 │   ├── data/
 │   │   └── supermarket_sales.csv
+│   │ 
+│   ├── dashboard/
+│   │   └── app.py
+│   │ 
 │   ├── visuals/
-│   │   ├── sales by product line_barplot.png
-│   │   ├── Bar chart Sales By Gender.png
 │   │   ├── Bar chart Sales By Customer type.png
-│   │   └── chart Payment Method Distribution.png
+│   │   ├── Bar chart Sales By Gender.png
+│   │   ├── Monthly Sales trends.png
+│   │   ├── Monthly_Sales_Trends.png
+│   │   ├── actual_vs_predicted.png
+│   │   ├── chart Payment Method Distribution.png
+│   │   ├── error_distribution.png
+│   │   └── sales by product line_barplot.png
+│   │
 │   ├── supermarket_sales_analysis.ipynb
 │   └── README.md
 │
 ├── AirBnb_price_dataset/
 │   ├── data/
-│   │   └── Airbnb_Data.csv
-│   ├── visuals/
-│   │   ├── histoplot.png
-│   │   └── heatmap.png
-│
+│   │   ├── Airbnb_Data.csv
+│   │   ├── input_Data.csv
+│   │   └── input_values_missing.csv
+│   │
+│   ├── dashboard/
+│   │   └── app.py
+│   │   
+│   ├── Visuals
+│   │    ├── heatmap.png
+│   │    └── histoplot.png
+│   │   
+│   ├── airbnb-analysis.ipynb
+│   ├── README.md
+│   ├── requirements.txt
+│   └── sample_output.csv
+│   
 ├── .gitignore
 └── README.md
 ```
