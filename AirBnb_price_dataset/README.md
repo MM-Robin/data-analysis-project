@@ -1,83 +1,178 @@
-# Airbnb Price Analysis
+# Airbnb Pricing Analysis Dashboard
+
+An interactive Streamlit dashboard for analyzing Airbnb listing prices, room characteristics, and market segments.
 
 ## Project Overview
 
-This project explores Airbnb listing data to analyze **price distribution** and identify **factors influencing pricing**.  
-The analysis supports **pricing strategy insights** and market understanding.
+This project explores Airbnb pricing behavior using interactive visual analytics. The dashboard helps users understand how listing prices vary by:
+
+- Price segment
+- Property type
+- Room type
+- Listing features such as bedrooms, bathrooms, beds, and guest capacity
+
+The goal is to turn raw Airbnb data into a business-style dashboard that supports pricing and segmentation analysis.
 
 ---
 
-## Business Objectives
+## Key Features
 
-- Understand Airbnb price distribution
-- Identify relationships between numerical features
-- Explore factors affecting listing prices
-- Support pricing and market positioning strategies
+- Interactive sidebar filters:
+  - Price Category
+  - Property Type
+  - Room Type
+  - Top N Categories
 
----
+- KPI summary cards:
+  - Average Price
+  - Average Bedrooms
+  - Average Accommodates
+  - Total Listings
 
-## Dataset
+- Visualizations:
+  - Price Comparison by Segment
+  - Price Distribution
+  - Listings by Price Category
+  - Average Price by Property Type
+  - Average Price by Room Type
+  - Correlation Heatmap
+  - Segment Summary Table
 
-- **File:** `Airbnb_Data.csv`
-- **Type:** Property listing data
-
----
-
-## Key Business Questions
-
-- How are Airbnb prices distributed?
-- Are there correlations between price and other variables?
-- Which features may influence higher or lower prices?
-
----
-
-## Analysis Performed
-
-- Data cleaning and preprocessing
-- Exploratory data analysis (EDA)
-- Distribution analysis using histograms
-- Correlation analysis using heatmaps
+- Dynamic insight messages based on selected filters
 
 ---
 
-## Visualizations
-
-- Price distribution histogram
-- Correlation heatmap
-
-(All plots are available in the `visuals/` folder)
-
----
-
-## Tools & Technologies
+## Tech Stack
 
 - Python
 - Pandas
 - NumPy
 - Matplotlib
 - Seaborn
-- Jupyter Notebook
+- Streamlit
 
 ---
 
-## Key Insights
+## Project Structure
 
-- Prices show a skewed distribution
-- Strong correlations exist between selected numerical features
-- Pricing variability suggests market segmentation opportunities
+````text
+AirBnb_price_dataset/
+│
+├── data/
+│   ├── Airbnb_Data.csv
+│   └── input_Data.csv
+│
+├── dashboard/
+│   └── app.py
+│
+├── README.md
+└── requirements.txt
+´´´
+---
+##  Data Description
+
+### 1. Airbnb_Data.csv
+Main dataset containing:
+- Price (or log_price)
+- Bedrooms, bathrooms, beds
+- Accommodates
+- Other listing features
+
+### 2. input_Data.csv
+Feature-engineered dataset including:
+- One-hot encoded property types
+- Room types
+- Cancellation policies
+- Booking features
+
+-> Both datasets have:
+- Same number of rows
+- Same row order
+
+So they are merged **column-wise** using `pd.concat()`.
 
 ---
 
-## How to Run
+##  Data Processing
+
+The dashboard performs:
+
+- Data merging (main + engineered dataset)
+- Price reconstruction (from log_price if needed)
+- Price segmentation:
+  - Budget (< €100)
+  - Mid-Range (€100–€200)
+  - Premium (> €200)
+- Decoding one-hot encoded columns into readable labels:
+  - Property Type
+  - Room Type
+
+---
+
+##  How to Run
+
+### 1. Clone the repository
 
 ```bash
-jupyter notebook airbnb-analysis.ipynb
-```
+git clone https://github.com/your-username/airbnb-pricing-dashboard.git
+cd airbnb-pricing-dashboard
+´´´
 
-## Business Value
+### 2. Install dependencies
+´´´bash
+pip install -r requirements.txt
+´´´
 
-This analysis can help:
+### 3. Run the dashboard
+´´´bash
+streamlit run dashboard/app.py
+´´´
 
-- Hosts optimize pricing strategies
-- Analysts understand market behavior
-- Businesses identify pricing patterns and trends
+##  Example Insights
+
+- Budget and Mid-Range listings dominate the market
+- Premium listings are fewer but significantly higher priced
+- Price increases with:
+  - Number of bedrooms
+  - Guest capacity (accommodates)
+- Property type has a strong influence on pricing
+- Room type impacts average price significantly
+
+---
+
+##  Business Value
+
+This dashboard demonstrates how data can be used to:
+
+- Optimize pricing strategies
+- Identify market segments
+- Compare listing categories
+- Support data-driven decisions
+- Build interactive BI tools using Python
+
+---
+
+##  Use Cases
+
+- Airbnb hosts analyzing pricing strategy
+- Data analysts exploring marketplace data
+- Students building portfolio projects
+- Recruiters evaluating data and dashboard skills
+
+---
+
+##  Future Improvements
+
+- Add location-based analysis (maps)
+- Integrate machine learning price prediction
+- Deploy dashboard online (Streamlit Cloud)
+- Add more booking-related insights
+- Improve UI with custom styling
+
+---
+
+##  Author
+
+**Mainuddin Monsur Robin**
+Aspiring Data Analyst / Data Engineer
+Hamburg, Germany
