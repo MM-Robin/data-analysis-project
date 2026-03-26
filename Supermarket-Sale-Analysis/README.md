@@ -1,10 +1,10 @@
-# 🛒 Supermarket Sales Analysis & Prediction
+#  Supermarket Sales Analysis & Prediction
 
 An end-to-end data analysis and machine learning project to explore sales patterns and predict transaction-level revenue.
 
 ---
 
-## 🚀 Project Overview
+##  Project Overview
 
 This project analyzes supermarket sales data to uncover business insights and build a predictive model for estimating sales.
 
@@ -16,7 +16,7 @@ It combines:
 
 ---
 
-## 📊 Dashboard Features
+##  Dashboard Features
 
 - Interactive filters (Branch, Product Line)
 - KPI cards:
@@ -33,17 +33,17 @@ It combines:
 
 ---
 
-## 🔮 Machine Learning Model
+##  Machine Learning Model
 
 A regression model is built to estimate **total sales per transaction**.
 
-### 📌 Input Features:
+###  Input Features:
 
 - Unit Price
 - Quantity
 - Customer Rating
 
-### 🎯 Target:
+###  Target:
 
 - Sales (Revenue)
 
@@ -57,13 +57,13 @@ A regression model is built to estimate **total sales per transaction**.
 | RMSE     | 78.73 |
 | R² Score | 0.90  |
 
-👉 The model explains approximately **90% of the variation in sales**, indicating strong predictive performance.
+=> The model explains approximately **90% of the variation in sales**, indicating strong predictive performance.
 
 ---
 
-## 📉 Model Evaluation Visualizations
+##  Model Evaluation Visualizations
 
-### 🔹 Actual vs Predicted Sales
+###  Actual vs Predicted Sales
 
 ![Actual vs Predicted](visuals/actual_vs_predicted.png)
 
@@ -71,7 +71,7 @@ A regression model is built to estimate **total sales per transaction**.
 
 ---
 
-### 🔹 Error Distribution
+###  Error Distribution
 
 ![Error Distribution](visuals/error_distribution.png)
 
@@ -79,7 +79,7 @@ A regression model is built to estimate **total sales per transaction**.
 
 ---
 
-## 💡 Key Insights
+##  Key Insights
 
 - Sales are strongly influenced by **price and quantity**
 - Certain product categories generate higher revenue
@@ -89,7 +89,7 @@ A regression model is built to estimate **total sales per transaction**.
 
 ---
 
-## 💼 Business Value
+##  Business Value
 
 This project demonstrates how data can be used to:
 
@@ -101,7 +101,7 @@ This project demonstrates how data can be used to:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - Python
 - Pandas
@@ -113,9 +113,9 @@ This project demonstrates how data can be used to:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
-´´´text
+```
 Supermarket-Sale-Analysis/
 │
 ├── data/
@@ -126,25 +126,27 @@ Supermarket-Sale-Analysis/
 │ └── error_distribution.png
 ├── supermarket_sales_analysis.ipynb
 ├── README.md
-´´´
+```
 
-## ▶️ How to Run
+##  How to Run
 
 ### 1. Clone the repository
 
-````bash
+```bash
 git clone https://github.com/your-username/supermarket-sales-analysis-dashboard.git
-cd Supermarket-Sale-Analysis´´´
+cd Supermarket-Sale-Analysis
+```
 
 2. Install dependencies
 ```bash
-pip install -r requirements.txt´´´
+pip install -r requirements.txt
+```
 
 3. Run dashboard
 ```bash
-streamlit run dashboard/app.py´´´
+streamlit run dashboard/app.py
+```
 
 ## Author
 
 **Mainuddin Monsur Robin**
-````
